@@ -29,7 +29,7 @@ deploy:
       name: node installation prep
       code: |
         apt-get update
-        apt-get installcurl -y
+        apt-get install curl -y
     - script:
       name: node installation
       code: apt-get install nodejs -y
