@@ -23,3 +23,8 @@ build:
     - arjen/hugo-build@2.9.0:
         version: "0.55.3" # optional, default: "0.55.1"
         config: "config.toml" # optional, default: ""
+deploy:
+  steps:
+    - dandehavilland/firebase-deploy@1.2.2:
+        project: "hugo-quickstart"
+        token: $FIREBASE_TOKEN
