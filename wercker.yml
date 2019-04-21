@@ -2,7 +2,7 @@
 # Docker Hub https://registry.hub.docker.com/_/debian/
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: debian
+box: ubuntu
 # You can also use services such as databases. Read more on our dev center:
 # https://devcenter.wercker.com/administration/services/
 # services:
@@ -25,6 +25,16 @@ build:
         config: "config.toml" # optional, default: ""
 deploy:
   steps:
-    - dandehavilland/firebase-deploy@1.2.2:
-        project: "hugo-quickstart"
-        token: $FIREBASE_TOKEN
+    - script:
+      name: node installation prep
+      code: |
+        apt-get update
+        apt-get installcurl -y
+    - script:
+      name: node installation
+      code: apt-get install nodejs -y
+    - script:
+      name: firebase-deploy
+      code: |
+        npm install -g firebase-tools
+        firebase deploy --project "hugo-quickstart" --token $FIREBASE_TOKEN
