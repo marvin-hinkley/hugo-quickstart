@@ -32,7 +32,9 @@ deploy:
         apt-get install curl -y
     - script:
       name: node installation
-      code: apt-get install nodejs -y
+      code: |
+        curl -sL https://deb.nodesource.com/setup_4.x | bash
+        apt-get install nodejs -y
     - script:
       name: firebase-deploy
       code: |
