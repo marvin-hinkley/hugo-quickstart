@@ -28,6 +28,4 @@ collections:
               widget: "date",
               format: "YYYY-MM-DD",
             }
-          - { label: "Slug", name: "slug", widget: "string" }
           - { label: "Content", name: "content", widget: "markdown" }
-          - { label: "Layout", name: "layout", widget: "string" }
