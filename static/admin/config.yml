@@ -1,0 +1,15 @@
+backend:
+  name: github
+  branch: master
+  repo: marvin-hinkley/hugo-quickstart
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "content/article"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
