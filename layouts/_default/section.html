@@ -4,7 +4,7 @@
   <ul>
     {{range .Paginator.Pages}}
     <li>
-      {{.Title}}
+      <a href="{{.URL}}">{{.Title}}</a>
     </li>
     {{end}}
   </ul>
