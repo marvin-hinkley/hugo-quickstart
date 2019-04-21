@@ -1,4 +1,4 @@
 ---
-title: thing
+title: thing 1
 ---
 
