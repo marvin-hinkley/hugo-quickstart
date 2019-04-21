@@ -18,13 +18,13 @@ collections:
     files:
       - name: "index"
         label: "Index Page"
-        file: "content/index.json"
+        file: "content/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
           - {
               label: "Date",
-              name: "description",
+              name: "date",
               widget: "date",
               format: "YYYY-MM-DD",
             }
