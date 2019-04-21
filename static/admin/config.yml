@@ -28,3 +28,4 @@ collections:
               widget: "date",
               format: "YYYY-MM-DD",
             }
+          - { label: "Body", name: "body", widget: "markdown" }
