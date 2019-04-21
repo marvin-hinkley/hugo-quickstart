@@ -33,7 +33,7 @@ deploy:
     - script:
       name: node installation
       code: |
-        curl -sL https://deb.nodesource.com/setup_4.x | bash
+        curl -sL https://deb.nodesource.com/setup_10.x | bash
         apt-get install nodejs -y
     - script:
       name: firebase-deploy
